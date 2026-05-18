@@ -1,5 +1,13 @@
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO_ROOT"
+
 products_filepath="data/products-large.jsonl"
 documents_filepath="resources/documents.jsonl"
+
+test -f "$documents_filepath" || {
+    echo "Missing $documents_filepath — see Datapipeline/readme.md"
+    exit 1
+}
 
 ## convert products to documents
 #rm -rf resources

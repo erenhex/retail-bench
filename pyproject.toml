@@ -8,9 +8,12 @@ version = "0.0.0"
 description = "RetailBench local agent harness, scoring, and search tooling."
 requires-python = ">=3.10"
 
+[project.optional-dependencies]
+datapipeline = ["pyserini", "ujson", "tqdm", "openai"]
+
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["src*", "retailbench*"]
+include = ["src*", "retailbench*", "Datapipeline*"]
 exclude = ["tests*"]
 
 [tool.pytest.ini_options]

@@ -3,14 +3,18 @@ import re
 import sys
 import math
 import random
+from pathlib import Path
+
 import ujson as json
 from collections import defaultdict
 
 from tqdm import tqdm
 from pyserini.search.lucene import LuceneSearcher
 
-from RetailBench.src.suitegen.util.llm import ask_llm
+from .util.llm import ask_llm
 
+_REPO_ROOT = Path(__file__).resolve().parents[3]
+os.chdir(_REPO_ROOT)
 
 random.seed(42)
 searcher = LuceneSearcher("indexes")

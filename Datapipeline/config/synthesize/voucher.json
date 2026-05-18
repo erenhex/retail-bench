@@ -1,7 +1,7 @@
 {
     "task": "voucher",
-    "total": 1000,
-    "synthesize_prompt_file": "RetailBench/src/suitegen/prompt/synthesize.md",
+    "total": 30,
+    "synthesize_prompt_file": "Datapipeline/src/suitegen/prompt/synthesize.md",
     "documents_file": "resources/documents.jsonl",
     "synthesize_file": "data/suites/synthesize_voucher.jsonl",
     "model_config": {
