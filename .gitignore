@@ -30,3 +30,5 @@ CLAUDE.md
 retailbench/logs/
 data/single_problem.json
 data/test_agent.py
+*.jsonl
+*.jsonl.gz
